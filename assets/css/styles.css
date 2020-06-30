@@ -1,8 +1,6 @@
 body {
     background-color: darkgrey;
     color: black;
-    padding-left: 300px;
-    padding-right: 300px;
     font-family: arial, helvetica, sans-serif;
     font-size: 16px;
 }
@@ -10,8 +8,8 @@ body {
 /*typography */
 
 p {
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 20px;
+    line-height: 30px;
     margin-bottom: 15px;
 }
 
@@ -34,12 +32,13 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
 
+
 }
 
 h2 {
     font-size: 30px;
     font-weight: bold;
-    border-bottom: 1px solid black;
+    border-bottom: 4px solid #444661;
     padding-bottom: 5px;
 }
 
@@ -90,6 +89,7 @@ header {
     width: 1000px;
     padding: 20px 200px 20px 100px;
 
+
 }
 
 
@@ -103,13 +103,14 @@ nav {
     text-transform: uppercase;
     width: 800px;
 
+
 }
 
 nav ul {}
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 40px;
 
 }
 
@@ -122,10 +123,22 @@ nav ul li a {
     letter-spacing: 1px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.currentpage {
     background-color: white;
     text-decoration: none;
     color: darkgray;
+}
+
+.hero {
+    min-height: 1000px;
+    background-color: ivory;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/favphoto.png);
+
+
 }
 
 main {
@@ -133,9 +146,14 @@ main {
     color: black;
     padding: 20px;
     overflow: auto;
+    margin: 0px 300px;
 
 
 
+}
+
+.text-container {
+    width: 70%;
 }
 
 footer {
@@ -143,8 +161,6 @@ footer {
     text-align: center;
     padding: 20px;
     color: white;
-    /*    padding-left: 0px;*/
-    /*    padding-right: 0px;*/
 }
 
 .leftimg {
