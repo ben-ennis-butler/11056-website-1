@@ -1,0 +1,157 @@
+body {
+    background-color: darkgrey;
+    color: black;
+    padding-left: 300px;
+    padding-right: 300px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/*typography */
+
+p {
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: serif;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h1 {
+    background-color: darkgrey;
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+/*achor styles */
+a {
+    color: darkgray;
+    background-color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+
+}
+
+a:visited {
+    color: grey;
+}
+
+a:active {
+    color: white;
+    background-color: gray;
+}
+
+h1 a:hover {
+    text-decoration: none;
+}
+
+h1 a:visited {
+    color: white;
+    background-color: darkgray
+}
+
+/*main containers */
+
+.wrapper {
+    width: 1000px;
+    margin: 20px auto 0px auto;
+
+
+}
+
+
+
+header {
+    background-color: darkgray;
+    height: 250px;
+    width: 1000px;
+    padding: 20px 200px 20px 100px;
+
+}
+
+
+
+nav {
+    background-color: darkgrey;
+    /*    border: 3px solid white;*/
+    width: 50%;
+    /*    float: right;*/
+    text-align: center;
+    text-transform: uppercase;
+    width: 800px;
+
+}
+
+nav ul {}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    background-color: darkgray;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    text-decoration: none;
+    color: darkgray;
+}
+
+main {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    overflow: auto;
+
+
+
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    /*    padding-left: 0px;*/
+    /*    padding-right: 0px;*/
+}
+
+.leftimg {
+    width: 60%;
+    float: left;
+    border: 1px soild grey;
+    padding: 20px;
+    background-color: grey;
+    margin: 20px 0px;
+}
