@@ -33,6 +33,7 @@ h1 {
     font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-style: normal;
 
 
 }
@@ -50,6 +51,11 @@ h3 {
 
 h4 {
     font-size: 25px;
+}
+
+h5 {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*achor styles */
@@ -80,7 +86,7 @@ h1 a:visited {
 
 h1 a:hover {
     text-decoration: none;
-    color: beige;
+    color: #F3F3F7;
 
 }
 
@@ -106,7 +112,7 @@ header {
 
 .col {
     float: left;
-    width: 33%;
+    width: 28%;
 }
 
 nav {
@@ -116,6 +122,8 @@ nav {
     /*    float: right;*/
     text-align: center;
     text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
 
 
 
