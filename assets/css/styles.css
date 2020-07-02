@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Teko:wght@400;600&display=swap');
+
 body {
     background-color: darkgrey;
     color: black;
-    font-family: arial, helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
 /*typography */
 
 p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     margin-bottom: 15px;
 }
@@ -19,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: serif;
+    font-family: 'Teko', sans-serif;
     font-size: 20px;
     text-align: left;
     margin-bottom: 20px;
@@ -36,10 +38,18 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
-    border-bottom: 4px solid #444661;
+    border-bottom: 3px solid #444661;
     padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
 }
 
 /*achor styles */
@@ -139,13 +149,14 @@ nav ul li a.currentpage {
 }
 
 .hero {
-    min-height: 500px;
+    background-image: url(../images/churchill-house-sketch.jpg);
+    min-height: 700px;
     /* height of hero image */
     background-color: ivory;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-image: url(../images/favphoto.png);
+    background-position: bottom;
+
 
 
 }
