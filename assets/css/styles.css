@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Teko:wght@400;600&display=swap');
 
+@media screen and (max-device-width: 480px) {
+    .column {
+        float: none;
+    }
+}
+
 body {
     background-color: darkgrey;
     color: black;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: calc(0.75em + 0.5vw);
 }
 
 /*typography */
 
 p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: calc(1.125em + 0.5vw);
+    line-height: calc(1.875em + 0.5vw);
     margin-bottom: 15px;
 }
+
+
 
 h1,
 h2,
@@ -22,45 +30,45 @@ h4,
 h5,
 h6 {
     font-family: 'Teko', sans-serif;
-    font-size: 20px;
+    font-size: calc(1.250em + 0.5vw);
     text-align: left;
     margin-bottom: 20px;
 }
 
+
 h1 {
     background-color: darkgrey;
     text-align: center;
-    font-size: 60px;
+    font-size: calc(2.5em + 0.5vw);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-style: normal;
-
-
 }
 
+
 h2 {
-    font-size: 35px;
+    font-size: calc(2.5em + 0.5vw);
     font-weight: bold;
-    border-bottom: 3px solid #444661;
+    border-bottom: 3px solid grey;
     padding-bottom: 5px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: calc(1.875em + 0.5vw);
 }
 
 h4 {
-    font-size: 25px;
+    font-size: calc(1.5625em + 0.5vw);
 }
 
 h5 {
-    font-size: 16px;
+    font-size: calc(1.000em + 0.5vw);
     font-family: 'Montserrat', sans-serif;
 }
 
 /*achor styles */
 a {
-    color: darkgray;
+    color: grey;
     background-color: white;
     text-decoration: none;
 }
@@ -71,7 +79,7 @@ a:hover {
 }
 
 a:visited {
-    color: grey;
+    color: #A3A3E7;
 }
 
 a:active {
@@ -105,7 +113,7 @@ h1 a:hover {
 
 header {
     background-color: darkgray;
-    height: 150px;
+    height: 180px;
     padding-top: 30px;
 
 }
@@ -117,13 +125,10 @@ header {
 
 nav {
     background-color: darkgrey;
-    /*    border: 3px solid white;*/
-
-    /*    float: right;*/
     text-align: center;
     text-transform: uppercase;
     font-family: 'Teko', sans-serif;
-    font-size: 30px;
+    font-size: calc(1em + 0.5vw);
 
 
 
@@ -144,7 +149,7 @@ nav ul li a:visited {
     color: white;
     text-decoration: none;
     background-color: darkgray;
-    padding: 10px 15px;
+    padding: 10px 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -179,7 +184,7 @@ main {
 }
 
 .text-container {
-    width: 85%;
+    width: 95%;
     margin: 0px auto;
     background-color: #fff;
     padding: 20px;
@@ -194,10 +199,214 @@ footer {
 }
 
 .leftimg {
-    width: 60%;
+    max-width: 100%;
+    height: auto;
     float: left;
-    border: 1px soild grey;
-    padding: 20px;
-    background-color: grey;
     margin: 20px 0px;
 }
+
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Button styling */
+.menu-toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    color: beige;
+}
+
+
+/*
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+.main-menu {
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.3s ease,
+        box-shadow 0.3s ease;
+    z-index: 999;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    /* Hide shadow w/ -8px while 'closed' */
+    -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+    box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+    min-height: 100%;
+    width: 200px;
+    background: #1a1a1a;
+}
+
+.main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.main-menu li:first-child a {
+    border-top: 1px solid #383838;
+}
+
+
+
+.main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*
+ On small devices, allow it to toggle...
+*/
+/*
+ :target for non-JavaScript
+ [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
+*/
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+    display: block;
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+    box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+}
+
+.main-menu:target ul,
+.main-menu[aria-expanded="true"] ul {
+    position: relative;
+    z-index: 1000;
+}
+
+/* 
+ We could us `.main-menu:target:after`, but
+ it wouldn't be clickable.
+*/
+.main-menu:target + .backdrop,
+.main-menu[aria-expanded="true"] + .backdrop {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    background: rgba(0, 0, 0, .85);
+    cursor: default;
+}
+
+@supports (position: fixed) {
+
+    .main-menu,
+    .main-menu:target + .backdrop,
+    .main-menu[aria-expanded="true"] + .backdrop {
+        position: fixed;
+    }
+}
+
+/*
+ Larger screen styling
+ Horizontal menu
+*/
+@media (min-width: 768px) {
+
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+
+    /* Undo positioning of off-canvas menu */
+    .main-menu {
+        position: relative;
+        left: auto;
+        top: auto;
+        height: auto;
+        display: block;
+    }
+
+    .main-menu ul {
+        display: flex;
+
+        /* Undo off-canvas styling */
+        padding: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+
+    .main-menu a {
+
+        border: 0 !important;
+        /* Remove borders from off-canvas styling */
+
+
+        /*
+ Demo purposes only
+*/
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 20px;
+            display: flex;
+            align-items: baseline;
+        }
+
+        article {
+            padding: 30px;
+            width: 55em;
+            font-size: 16px;
+            line-height: 1.5em;
+        }
+
+        article h2 {
+            font-weight: 500;
+            font-size: 28px;
+        }
+
+        .logo {
+            margin: 0 30px 0 10px;
+            font-size: 1.5em;
+        }
