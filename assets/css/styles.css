@@ -10,14 +10,14 @@ body {
     background-color: darkgrey;
     color: black;
     font-family: 'Montserrat', sans-serif;
-    font-size: calc(0.75em + 0.5vw);
+    font-size: calc(0.375em + 0.5vw);
 }
 
 /*typography */
 
 p {
     font-size: calc(1.125em + 0.5vw);
-    line-height: calc(1.875em + 0.5vw);
+    line-height: calc(1.125em + 0.5vw);
     margin-bottom: 15px;
 }
 
@@ -63,7 +63,8 @@ h4 {
 
 h5 {
     font-size: calc(1.000em + 0.5vw);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat',
+        sans-serif;
 }
 
 /*achor styles */
@@ -113,8 +114,8 @@ h1 a:hover {
 
 header {
     background-color: darkgray;
-    height: 180px;
-    padding-top: 30px;
+    height: 200px;
+    padding-top: 0px;
 
 }
 
@@ -227,11 +228,6 @@ footer {
     color: #333;
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
-    color: beige;
-}
-
 
 /*
  Default styles + Mobile first
@@ -243,11 +239,9 @@ footer {
     left: -200px;
     top: 0;
     height: 100%;
-    overflow-y: scroll;
-    overflow-x: visible;
     transition: left 0.3s ease,
-        box-shadow 0.3s ease;
-    z-index: 999;
+
+
 }
 
 .main-menu ul {
@@ -255,9 +249,7 @@ footer {
     margin: 0;
     padding: 2.5em 0 0;
     /* Hide shadow w/ -8px while 'closed' */
-    -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
-    box-shadow: -8px 0 8px rgba(0, 0, 0, .5);
+
     min-height: 100%;
     width: 200px;
     background: #1a1a1a;
@@ -297,9 +289,7 @@ footer {
     display: block;
     left: 0;
     outline: none;
-    -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-    -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-    box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+
 }
 
 .main-menu:target .menu-close,
@@ -356,8 +346,9 @@ footer {
         position: relative;
         left: auto;
         top: auto;
-        height: auto;
+        height: 200px;
         display: block;
+        margin-top: 5px;
     }
 
     .main-menu ul {
@@ -365,12 +356,10 @@ footer {
 
         /* Undo off-canvas styling */
         padding: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
         height: auto;
         width: auto;
         background: none;
+        margin-top: 100px;
     }
 
     .main-menu a {
@@ -392,6 +381,7 @@ footer {
             padding: 20px;
             display: flex;
             align-items: baseline;
+
         }
 
         article {
