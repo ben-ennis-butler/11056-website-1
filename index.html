@@ -8,6 +8,7 @@
     <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
@@ -17,49 +18,22 @@
 <body>
 
     <header>
-        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
-            <span class="sr-only">Open main menu</span>
-            <span class="fa fa-bars" aria-hidden="true"></span>
-        </a>
+        <!--        <div class="wrapper">-->
 
-        <div class="wrapper">
-
-
-            <nav id="main-menu" class="main-menu" aria-label="Main menu">
-                <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
-                    <span class="sr-only">Close main menu</span>
-                    <span class="fa fa-close" aria-hidden="true"></span>
-                </a>
-                <h6 id="main-menu-heading" class="sr-only">Main menu</h6>
-                <div class="col">
-                    <ul aria-labelledby="main-menu-heading">
-                        <li><a href="history.html">History</a></li>
-                        <li><a href="robinboyd.html">Robin Boyd</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h1><a href="index.html">Churchill House</a></h1>
-
-                </div>
-                <div class="col">
-                    <ul aria-labelledby="main-menu-heading">
-                        <li><a href="significance.html">Significance</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-
-                    </ul>
-
-                </div>
-
-
-
-
-            </nav>
-
-
+        <div class="col-middle">
+            <h1><a href="index.html">Churchill House</a></h1>
         </div>
-        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
-    </header>
+        <nav>
 
+            <ul>
+                <li class="left-item"><a href="history.html">History</a></li>
+                <li class="left-item"><a href="robinboyd.html">Robin Boyd</a></li>
+                <li class="right-item"><a href="significance.html">Significance</a></li>
+                <li class="right-item"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <!--        </div>-->
+    </header>
     <div class="hero">
         <!--     set image in css -->
     </div>
@@ -162,6 +136,4 @@
         </div>
     </footer>
 
-</body>
-
-</html>
+</body></html>

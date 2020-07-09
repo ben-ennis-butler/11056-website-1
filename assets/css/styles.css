@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Teko:wght@400;600&display=swap');
 
-@media screen and (max-device-width: 480px) {
-    .column {
-        float: none;
-    }
-}
+
 
 body {
     background-color: darkgrey;
@@ -39,10 +35,11 @@ h6 {
 h1 {
     background-color: darkgrey;
     text-align: center;
-    font-size: calc(2.5em + 0.5vw);
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-style: normal;
+    /*    display: inline-block;*/
 }
 
 
@@ -104,13 +101,9 @@ h1 a:hover {
 /*main containers */
 
 .wrapper {
-    width: 1000px;
+    width: 980px;
     margin: 0px auto 0px auto;
-
-
 }
-
-
 
 header {
     background-color: darkgray;
@@ -119,9 +112,10 @@ header {
 
 }
 
+/*column for navigation items*/
 .col {
     float: left;
-    width: 28%;
+    width: 33%;
 }
 
 nav {
@@ -129,20 +123,17 @@ nav {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Teko', sans-serif;
-    font-size: calc(1em + 0.5vw);
-
-
+    font-size: 1.9em;
 
 }
 
 nav ul {
-    margin-top: 60px;
+    margin-top: -50px;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-
-
 }
 
 nav ul li a,
@@ -162,6 +153,21 @@ nav ul li a.currentpage {
     color: darkgray;
 }
 
+.col-middle {
+    margin: 0 auto;
+    /*    width: 215px;*/
+    padding-top: 80px;
+}
+
+.left-item {
+    float: left;
+}
+
+.right-item {
+    float: right;
+}
+
+
 .hero {
     background-image: url(../images/churchill-house-sketch.jpg);
     min-height: 700px;
@@ -171,25 +177,20 @@ nav ul li a.currentpage {
     background-size: cover;
     background-position: bottom;
 
-
-
 }
 
 main {
     color: black;
-
-
-
-
-
 }
 
 .text-container {
+    /*
     width: 95%;
     margin: 0px auto;
+*/
     background-color: #fff;
     padding: 20px;
-    overflow: auto;
+    /*    overflow: auto;*/
 }
 
 footer {
@@ -207,196 +208,48 @@ footer {
 }
 
 
-/* Screen reader only */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* Button styling */
-.menu-toggle {
-    display: inline-block;
-    padding: .75em 15px;
-    line-height: 1em;
-    font-size: 1em;
-    color: #333;
-}
-
-
-/*
- Default styles + Mobile first
- Offscreen menu style
-*/
-.main-menu {
-    position: absolute;
-    display: none;
-    left: -200px;
-    top: 0;
-    height: 100%;
-    transition: left 0.3s ease,
-
-
-}
-
-.main-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 2.5em 0 0;
-    /* Hide shadow w/ -8px while 'closed' */
-
-    min-height: 100%;
-    width: 200px;
-    background: #1a1a1a;
-}
-
-.main-menu a {
-    display: block;
-    padding: .75em 15px;
-    line-height: 1em;
-    font-size: 1em;
-    color: #fff;
-    text-decoration: none;
-
-}
-
-.main-menu li:first-child a {
-    border-top: 1px solid #383838;
-}
-
-
-
-.main-menu .menu-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-/*
- On small devices, allow it to toggle...
-*/
-/*
- :target for non-JavaScript
- [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
-*/
-.main-menu:target,
-.main-menu[aria-expanded="true"] {
-    display: block;
-    left: 0;
-    outline: none;
-
-}
-
-.main-menu:target .menu-close,
-.main-menu[aria-expanded="true"] .menu-close {
-    z-index: 1001;
-}
-
-.main-menu:target ul,
-.main-menu[aria-expanded="true"] ul {
-    position: relative;
-    z-index: 1000;
-}
-
-/* 
- We could us `.main-menu:target:after`, but
- it wouldn't be clickable.
-*/
-.main-menu:target + .backdrop,
-.main-menu[aria-expanded="true"] + .backdrop {
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 998;
-    background: #000;
-    background: rgba(0, 0, 0, .85);
-    cursor: default;
-}
-
-@supports (position: fixed) {
-
-    .main-menu,
-    .main-menu:target + .backdrop,
-    .main-menu[aria-expanded="true"] + .backdrop {
-        position: fixed;
-    }
-}
-
-/*
- Larger screen styling
- Horizontal menu
-*/
-@media (min-width: 768px) {
-
-    .menu-toggle,
-    .main-menu .menu-close {
-        display: none;
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
     }
 
-    /* Undo positioning of off-canvas menu */
-    .main-menu {
-        position: relative;
-        left: auto;
-        top: auto;
-        height: 200px;
-        display: block;
-        margin-top: 5px;
+    header {
+        height: 12em;
+        padding: 20px 0;
     }
 
-    .main-menu ul {
-        display: flex;
 
-        /* Undo off-canvas styling */
-        padding: 0;
-        height: auto;
-        width: auto;
-        background: none;
-        margin-top: 100px;
+
+    .col {
+        width: 100%;
+        float: none;
     }
 
-    .main-menu a {
+    .hero {
+        min-height: 400px;
+    }
 
-        border: 0 !important;
-        /* Remove borders from off-canvas styling */
+    h1 {
+        margin-bottom: 0;
+    }
 
+    nav ul {
+        padding-top: 0;
+        margin-top: 20px
+    }
 
-        /*
- Demo purposes only
-*/
-        *,
-        *:before,
-        *:after {
-            box-sizing: border-box;
-        }
+    .col-middle {
+        padding-top: 0;
+    }
 
-        header {
-            padding: 20px;
-            display: flex;
-            align-items: baseline;
+    .left-item {
+        float: none;
+    }
 
-        }
+    .right-item {
+        float: none;
+    }
 
-        article {
-            padding: 30px;
-            width: 55em;
-            font-size: 16px;
-            line-height: 1.5em;
-        }
+}
 
-        article h2 {
-            font-weight: 500;
-            font-size: 28px;
-        }
-
-        .logo {
-            margin: 0 30px 0 10px;
-            font-size: 1.5em;
-        }
+@media (min-width: 480) and (max-width: 1020px) {}
